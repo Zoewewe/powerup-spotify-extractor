@@ -227,7 +227,7 @@ class SpotifyAPIExtractor:
         logger.info(f"💾 Saving detailed data to {filename}...")
         
         try:
-            with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
+            with open(filename, 'w', newline='', encoding='utf-8-sig') as csvfile: 
                 fieldnames = ['title', 'artist', 'album', 'added_at', 'spotify_id', 'spotify_url']
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 
